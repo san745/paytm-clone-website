@@ -4,17 +4,11 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from "./pages/home";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Transaction from './pages/transation'; 
+import Transaction from './pages/transaction'; 
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
 function App() {
-    const [isOpen, setIsOpen] = useState(false);
     const [user, setUser] = useState(null);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
     useEffect(() => {
         const storedUser = JSON.parse(localStorage.getItem('user'));
         if (storedUser) {

@@ -84,17 +84,15 @@ export default function Transaction() {
     return (
         <div>
             <div className="m-4">
-                {user && (
-                    <div className="card mt-4">
-                        <div className="card-body">
-                            <h5 className="card-title">User Information</h5>
-                            <p className="card-text"><strong>Email:</strong> {user.email}</p>
-                            <p className="card-text"><strong>UPI ID:</strong> {user.upi_id}</p>
-                            <p className="card-text"><strong>Balance:</strong> {user.balance}</p>
-                        </div>
-                    </div>
-                )}
+              {user && (
+                      <div className="user-card">
+                      <h5>User Information</h5>
+                      <p><strong>Email:</strong> {user.email}</p>
+                      <p><strong>UPI ID:</strong> {user.upi_id}</p>
+                      <p><strong>Balance:</strong> ₹{user.balance}</p>
             </div>
+          )}
+         </div>
             <div className="m-4">
                 <h1>Initiate Transaction</h1>
                 <input
